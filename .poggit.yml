@@ -2,5 +2,11 @@
 build-by-default: true
 branches:
 - main
-projects: []
+projects:
+ BroadcastMessage:
+  path: ""
+  libs:
+    - src: VennDev/LibVapmPMMP/LibVapmPMMP
+      version: 1.8.8
+      branch: "main"
 ...
