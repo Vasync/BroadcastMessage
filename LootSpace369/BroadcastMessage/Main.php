@@ -17,7 +17,7 @@ class Main extends PluginBase {
       foreach ($this->getText() as $text) {
         $this->getServer()->broadcastMessage($text);
       }
-    },$this->getConfig()->get("delay")*1000;
+    },$this->getConfig()->get("delay")*1000);
   }
 
   public function getText(): array {
