@@ -10,7 +10,7 @@ use vennv\vapm\System;
 
 class Main extends PluginBase {
 
-  public function onEnablr(): void {
+  public function onEnable(): void {
     VapmPMMP::init($this);
     $this->saveDefaultConfig();
     System::setInterval(function() {
