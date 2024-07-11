@@ -14,8 +14,8 @@ class Main extends PluginBase {
     VapmPMMP::init($this);
     $this->saveDefaultConfig();
     System::setInterval(function() {
-      foreach ($this->getText() as $text) {
-        $this->getServer()->broadcastMessage($text);
+      if ($text = $this->getText() !== null) {
+        $this->getServer()->broadcastMessage($text[mt_rand(1,count($text))]);
       }
     },$this->getConfig()->get("delay")*1000);
   }
